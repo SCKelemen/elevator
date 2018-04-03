@@ -1,0 +1,11 @@
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.csprojResolveAssemblyReference.cache
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.csproj.CoreCompileInputs.cache
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.AssemblyInfoInputs.cache
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.AssemblyInfo.cs
+C:\Users\skelemen\source\repos\FSM\FSM\bin\Debug\netcoreapp2.0\FSM.deps.json
+C:\Users\skelemen\source\repos\FSM\FSM\bin\Debug\netcoreapp2.0\FSM.runtimeconfig.json
+C:\Users\skelemen\source\repos\FSM\FSM\bin\Debug\netcoreapp2.0\FSM.runtimeconfig.dev.json
+C:\Users\skelemen\source\repos\FSM\FSM\bin\Debug\netcoreapp2.0\FSM.dll
+C:\Users\skelemen\source\repos\FSM\FSM\bin\Debug\netcoreapp2.0\FSM.pdb
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.dll
+C:\Users\skelemen\source\repos\FSM\FSM\obj\Debug\netcoreapp2.0\FSM.pdb
