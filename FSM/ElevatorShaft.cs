@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FSM
 {
-    class Floor
+    public class Floor
     {
         private Floor _up;
         private Floor _down;
@@ -36,7 +36,7 @@ namespace FSM
             return Identity;
         }
     }
-    class ElevatorShaft
+    public class ElevatorShaft
     {
         public  Floor first;
         public int height;
