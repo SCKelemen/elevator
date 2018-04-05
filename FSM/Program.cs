@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using FSM.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using StateMachine;
 using RollingStack;
+using Application.Processor;
 
 namespace FSM
 {
@@ -88,6 +92,8 @@ namespace FSM
     {
         static void Main(string[] args)
         {
+            CommandProcessor processor = new CommandProcessor(true);
+
             ElevatorGroup group = new ElevatorGroup(3, 12);
             
             RollingStack<int?> stack = new RollingStack<int?>(50);
@@ -115,6 +121,18 @@ namespace FSM
                 }
 
                 Console.WriteLine(s);
+            }
+
+
+            var files = JArray.Parse(
+                System.IO.File.ReadAllText(
+                    "C:\\Go\\src\\gitlab.hylandqa.net\\skelemen\\cryptanalysis\\output\\report.json"));
+            //JsonConvert.DeserializeObject<Models.Files>(System.IO.File.ReadAllText("C:\\Go\\src\\gitlab.hylandqa.net\\skelemen\\cryptanalysis\\output\\report.json"));
+            IEnumerable<Models.File> list = files.ToObject<IEnumerable<Models.File>>();
+            //list.GetEnumerator().MoveNext()
+            foreach (Models.File file in list)
+            {
+                Console.WriteLine(file.Path);
             }
 
             Console.WriteLine("Finished.");

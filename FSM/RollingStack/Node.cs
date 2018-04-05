@@ -23,10 +23,13 @@ namespace RollingStack
         {
             return GetEnumerator();
         }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
         public NodeEnumeration<T> GetEnumerator()
         {
-            Node<T> self = new Node<T>(_value);
-            self.Next = Next;
             return new NodeEnumeration<T>(this); 
         }
 
