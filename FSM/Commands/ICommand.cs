@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿//using System.Threading.Tasks;
 
 
-namespace Commands
-{
-    public interface ICommand<Tparam, Tresult> : ITypedCommand<Tparam, Tresult>
-    {
-        Task<Tresult> ExecuteAsync(Tparam parameter);
-    }
-}
+//namespace Commands
+//{
+//    public interface ICommand<Tparam, Tresult> : ITypedCommand<Tparam, Tresult>
+//    {
+//        Task<Tresult> ExecuteAsync(Tparam parameter);
+//    }
+//}

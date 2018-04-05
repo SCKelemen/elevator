@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using StateMachine;
+using RollingStack;
 
 namespace FSM
 {
@@ -89,6 +90,32 @@ namespace FSM
         {
             ElevatorGroup group = new ElevatorGroup(3, 12);
             
+            RollingStack<int?> stack = new RollingStack<int?>(50);
+            Console.WriteLine($"Rolling Stack:\tMaxSize: {stack.MaxSize}\tSize: {stack.Size}\tCount: {stack.Count()}");
+            for (int i = 1; i <= 55; i++)
+            {
+                if (stack.Push(i))
+                {
+                    Console.WriteLine("Stack trimmed.");
+                }
+                Console.WriteLine($"Rolling Stack:\tMaxSize: {stack.MaxSize}\tSize: {stack.Size}\tCount: {stack.Count()}");
+            }
+
+            for (int i = 1; i <= 55; i++)
+            {
+                int? val = stack.Pop();
+                string s;
+                if (val == null)
+                {
+                    s = "null";
+                }
+                else
+                {
+                    s = val.ToString();
+                }
+
+                Console.WriteLine(s);
+            }
 
             Console.WriteLine("Finished.");
             Console.ReadKey();
